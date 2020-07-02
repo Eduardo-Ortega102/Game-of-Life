@@ -19,4 +19,13 @@ public class Cell {
     public void updateState(int aliveNeighbours) {
         this.stateRules.getOrDefault(aliveNeighbours, () -> this.state = State.DEAD).execute();
     }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    @Override
+    public String toString() {
+        return state + "";
+    }
 }

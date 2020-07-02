@@ -45,4 +45,9 @@ public class CellShould {
         assertThat(cell_2.getState()).isEqualTo(State.DEAD);
     }
 
+    @Test
+    public void have_a_string_representation() {
+        assertThat(new Cell(State.ALIVE).toString()).isEqualTo("1");
+        assertThat(new Cell(State.DEAD).toString()).isEqualTo("0");
+    }
 }
